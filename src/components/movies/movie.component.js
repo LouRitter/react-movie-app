@@ -18,21 +18,21 @@ const Movie = ({ movie }) => {
 
   return (
     
+    <div className="col-md-6 col-sm-12">
 
-    <div className="card mb-3" style={{ width: "26vw" }}>
-        <div className="row no-gutters">
-          <div className="col-md-4">
+    <div className="card mb-3">
+        <div className="d-flex justify-content-evenly">
+          <div className="w-25">
             <img
             className="card-img"
-            width="20vw"
             alt={`The movie titled: ${movie.title}`}
             src={poster}
           />
           </div>
-          <div className="col-md-8">
+          <div className="w-75 ml-1">
             <div className="card-body">
               <h5 className="card-title">{movie.title}</h5>
-            <p className="card-text" style={{ fontSize: "0.75em" }}>{movie.overview}</p>
+            {/* <p className="card-text" style={{ fontSize: "0.75em" }}>{movie.overview}</p> */}
             <div className="row">
               <button className="btn btn-primary" onClick={() => saveMovie({ movie }) } style={{width: "40%", margin:"5px"}}>Love</button>
               <button className="btn btn-secondary" style={{width: "40%", margin:"5px"}}>Hate</button>
@@ -43,7 +43,7 @@ const Movie = ({ movie }) => {
           </div>
         </div>
       </div>
-    
+    </div>
   );
 };
 
